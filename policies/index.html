@@ -4,7 +4,7 @@
 <link rel="stylesheet" href="../static/style.css">
 <link rel="stylesheet" href="../static/font-awesome/css/font-awesome.min.css">
 <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,100,italic" rel="stylesheet">
-<title>Policies - Zenodo Pages</title>
+<title>Zenodo</title>
 <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 <body>
@@ -32,7 +32,6 @@
       </div>
     </nav>
   </header>
-
   <div class="communities">
     
     <div class="header">
@@ -44,6 +43,9 @@
 
   
   <li><a href="../">About</a></li>
+
+  
+  <li><a href="../infrastructure/">Infrastructure</a></li>
 
   
   <li class="active"><a href="../policies/">Policies</a></li>
@@ -67,137 +69,55 @@
     <div class="container body-container">
       <div class="row">
         <div class="col-md-12">
-          <div class="row">
-<div class="col-xs-12">
-  <h1>Policies</h1>
-  <div class="row">
-    <div class="col-md-6">
-      <h4>Content</h4>
-      <dl>
-        <dt>Scope</dt>
-        <dd>
-          All fields of science.
-          All types of research artifacts.
-          Content must not violate privacy or copyright, or breach confidentiality or non-disclosure agreements for data collected from human subjects.
-        </dd>
+          <h1>Policies</h1>
+<h3>Content</h3>
+<ul>
+<li><strong>Scope</strong>: All fields of research.
+All types of research artifacts.
+Content must not violate privacy or copyright, or breach confidentiality or non-disclosure agreements for data collected from human subjects.</li>
+<li><strong>Status of research data</strong>: Any status is accepted, from any stage of the research lifecycle.</li>
+<li><strong>Eligible depositors</strong>: Anyone may register as user of Zenodo.
+All users are allowed to deposit content for which they possess the appropriate rights.</li>
+<li><strong>Ownership</strong>: By uploading content, no change of ownership is implied and no property rights are transferred to CERN.
+All uploaded content remains the property of the parties prior to submission.</li>
+<li><strong>Data file formats</strong>: All formats are allowed - even preservation unfriendly.
+We are working on guidelines and features that will help people deposit in preservation friendly formats.</li>
+<li><strong>Volume and size limitations</strong>: Total files size limit per record is 50GB.
+Higher quotas can be requested and granted on a case-by-case basis.</li>
+<li><strong>Data quality</strong>: All information is provided “as-is”, and the user shall hold Zenodo and information providers supplying data to Zenodo free and harmless in connection with the use of such information.</li>
+<li><strong>Metadata types and sources</strong>: All metadata is stored internally in JSON-format according to a defined <a href="https://zenodo.org/schemas/records/record-v1.0.0.json">JSON schema</a>. Metadata is exported in several standard formats such as MARCXML, Dublin Core, and DataCite Metadata Schema (according to the <a href="http://guidelines.openaire.eu">OpenAIRE Guidelines</a>).</li>
+<li><strong>Language</strong>: For textual items, English is preferred but all languages are accepted.</li>
+<li><strong>Licenses</strong>: Users must specify a license for all publicly available files. Licenses for closed access files may be specified in the description field.</li>
+</ul>
+<h3>Access and Reuse</h3>
+<ul>
+<li><strong>Access to data objects</strong>: Files may be deposited under closed, open, or embargoed access. Files deposited under closed access are protected against unauthorized access at all levels. Access to metadata and data files is provided over standard protocols such as HTTP and OAI-PMH.</li>
+<li><strong>Use and re-use of data objects</strong>: Use and re-use is subject to the license under which the data objects were deposited.</li>
+<li><strong>Embargo status</strong>: Users may deposit content under an embargo status and provide and end date for the embargo. The repository will restrict access to the data until the end of the embargo period; at which time, the content will become publically available automatically.</li>
+<li><strong>Restricted Access</strong>: Users may deposit restricted files with the ability to share access with others if certain requirements are met.  These files will not be made publicly available and sharing will be made possible only by the approval of depositor of the original file.</li>
+<li><strong>Metadata access and reuse</strong>: Metadata is licensed under CC0, except for email addresses. All metadata is exported via OAI-PMH and can be harvested.</li>
+</ul>
+<h3>Removal</h3>
+<ul>
+<li><strong>Revocation</strong>: Content not considered to fall under the scope of the repository will be removed and associated DOIs issued by Zenodo revoked. Please signal promptly, ideally no later than 24 hours from upload, any suspected policy violation. Alternatively, content found to already have an external DOI will have the Zenodo DOI invalidated and the record updated to indicate the original external DOI. User access may be revoked on violation of Terms of Use.&lt;/dd&gt;</li>
+<li><strong>Withdrawal</strong>: If the uploaded research object must later be withdrawn, the reason for the withdrawal will be indicated on a tombstone page, which will henceforth be served in its place. Withdrawal is considered an exceptional action, which normally should be requested and fully justified by the original uploader. In any other circumstance reasonable attempts will be made to contact the original uploader to obtain consent. The DOI and the URL of the original object are retained.</li>
+</ul>
+<h3>Longevity</h3>
+<ul>
+<li><strong>Versions</strong>: Data files are versioned.
+Records are not versioned.
+The uploaded data is archived as a Submission Information Package.
+Derivatives of data files are generated, but original content is never modified.
+Records can be retracted from public view; however, the data files and record are preserved.</li>
+<li><strong>Replicas</strong>: All data files are stored in CERN Data Centres, primarily Geneva, with replicas in Budapest.
+Data files are kept in multiple replicas in a distributed file system, which is backed up to tape on a nightly basis.</li>
+<li><strong>Retention period</strong>: Items will be retained for the lifetime of the repository. This is currently the lifetime of the host laboratory CERN, which currently has an experimental programme defined for the next 20 years at least.</li>
+<li><strong>Functional preservation</strong>: Zenodo makes no promises of usability and understandability of deposited objects over time.</li>
+<li><strong>File preservation</strong>: Data files and metadata are backed up nightly and replicated into multiple copies in the online system.</li>
+<li><strong>Fixity and authenticity</strong>: All data files are stored along with a MD5 checksum of the file content. Files are regularly checked against their checksums to assure that file content remains constant.</li>
+<li><strong>Succession plans</strong>: In case of closure of the repository, best efforts will be made to integrate all content into suitable alternative institutional and/or subject based repositories.</li>
+</ul>
 
-        <dt>Status of research data</dt>
-        <dd>
-          Any status is accepted, from any stage of the research lifecycle.
-        </dd>
-
-        <dt>Eligible depositors</dt>
-        <dd>
-          Anyone may register as user of Zenodo.
-          All users are allowed to deposit content for which they possess the appropriate rights.
-        </dd>
-
-        <dt>Ownership</dt>
-        <dd>
-          By uploading content, no change of ownership is implied and no property rights are transfer to CERN.
-          All uploaded content remains the property of the parties prior to submission.
-        </dd>
-
-        <dt>Versions</dt>
-        <dd>
-          Data files are versioned.
-          Records are not versioned.
-          The uploaded data is archived as a Submission Information Package.
-          Derivatives of data files are generated, but original content is never modified.
-          Records can be retracted from public view; however, the data files and record are preserved.
-        </dd>
-
-        <dt>Data file formats</dt>
-        <dd>
-          All formats are allowed - even preservation unfriendly.
-          We are working on guidelines and features that will help people deposit in preservation friendly formats.
-        </dd>
-
-        <dt>Volume and size limitations</dt>
-        <dd>
-          Total files size limit per record is 50GB.
-          Higher quotas can be requested on case-by-case basis.
-          All data files are stored in CERN Data Centres, primarily Geneva, with replicas in Budapest.
-          Data files are kept in multiple replicas in a distributed file system, which is backed up to tape on a nightly basis.
-        </dd>
-
-        <dt>Data quality</dt>
-        <dd>
-          All information is provided “as-is”, and the user shall hold Zenodo and information providers supplying data to Zenodo free and harmless in connection with the use of such information.
-        </dd>
-
-      </dl>
-
-      <h4>Withdrawal of data and revocation of DOIs</h4>
-      <dl>
-        <dt>Revocation</dt>
-        <dd>Content not considered to fall under the scope of the repository will be removed and associated DOIs issued by Zenodo revoked. Please signal promptly, ideally no later than 24 hours from upload, any suspected policy violation. Alternatively, content found to already have an external DOI will have the Zenodo DOI invalidated and the record updated to indicate the original external DOI. User access may be revoked on violation of Terms of Use.</dd>
-
-        <dt>Withdrawal</dt>
-        <dd>If the uploaded research object must later be withdrawn, the reason for the withdrawal will be indicated on a tombstone page, which will henceforth be served in its place. Withdrawal is considered an exceptional action, which normally should be requested and fully justified by the original uploader. In any other circumstance reasonable attempts will be made to contact the original uploader to obtain consent. The DOI and the URL of the original object are retained.</dd>
-      </dl>
-    </div>
-    <div class="col-md-6">
-    <h4>Metadata</h4>
-    <dl>
-      <dt>Metadata access and reuse</dt>
-      <dd>
-        Zenodo is provided free of charge for educational and informational use.
-        Metadata is licensed under CC0, except for email addresses. All metadata is exported via OAI-PMH and can be harvested.
-      </dd>
-
-      <dt>Metadata types and sources</dt>
-      <dd>All metadata is stored internally in MARC according to the schema defined in <a href="http://inveniosoftware.org/wiki/Project/OpenAIREplus/DevelopmentRecordMarkup">http://inveniosoftware.org/wiki/Project/OpenAIREplus/DevelopmentRecordMarkup</a>. Metadata is exported in several standard formats such as MARCXML, Dublin Core, and DataCite Metadata Schema according to OpenAIRE Guidelines.</dd>
-
-      <dt>Language</dt>
-      <dd>For textual items, English is preferred but all languages are accepted.</dd>
-
-      <dt>Licenses</dt>
-      <dd>Users must specify a license for all publicly available files. Licenses for closed access files may be specified in the description field.</dd>
-    </dl>
-
-
-    <h4>Access and reuse of data</h4>
-    <dl>
-      <dt>Access to data objects</dt>
-      <dd>Files may be deposited under closed, open, or embargoed access. Files deposited under closed access are protected against unauthorized access at all levels. Access to metadata and data files is provided over standard protocols such as HTTP and OAI-PMH.</dd>
-
-      <dt>Use and re-use of data objects</dt>
-      <dd>Use and re-use is subject to the license under which the data objects were deposited.</dd>
-
-      <dt>Tracking users and statistics</dt>
-      <dd>Zenodo does not track, collect or retain personal information from users of Zenodo except as otherwise provided herein. In order to enhance Zenodo and monitor traffic, non-personal information such as IP addresses and cookies may be tracked and retained, and log files may be shared, in aggregation, with other community services (in particular OpenAIREplus partners). User provided information, like corrections of metadata or paper claims, will be integrated into the database without displaying its source and may be shared with other services.
-      Zenodo will take all reasonable measures to protect the privacy of its users and to resist service interruptions, intentional attacks, or other events that may compromise the security of the Zenodo website.</dd>
-    </dl>
-
-    <dt>Embargo status</dt>
-    <dd>Users may deposit content under an embargo status and provide and end date for the embargo. The repository will restrict access to the data until the end of the embargo period; at which time, the content will become publically available automatically.</dd>
-    <dt>Restricted Access</dt>
-    <dd>Users may deposit restricted files with the ability to share access with others if certain requirements are met.  These files will not be made publicly available and sharing will be made possible only by the approval of depositor of the original file.</dd>
-    <h4>Preservation of data</h4>
-    <dl>
-
-    <dt>Retention period</dt>
-    <dd>Items will be retained for the lifetime of the repository. This is currently the lifetime of the host laboratory CERN, which currently has an experimental programme defined for the next 20 years at least.</dd>
-
-    <dt>Functional preservation</dt>
-    <dd>Zenodo makes no promises of usability and understandability of deposited objects over time.</dd>
-
-    <dt>File preservation</dt>
-    <dd>Data files and metadata are backed up nightly and replicated into multiple copies in the online system.</dd>
-
-    <dt>Fixity and authenticity</dt>
-    <dd>All data files are stored along with a MD5 checksum of the file content. Files are regularly checked against their checksums to assure that file content remains constant.</dd>
-    </dl>
-
-    <h4>Succession plans</h4>
-    <dl>
-    <dd>In case of closure of the repository, best efforts will be made to integrate all content into suitable alternative institutional and/or subject based repositories.</dd>
-    </dl>
-    </div>
-  </div>
-</div>
-</div>
         </div>
       </div>
     </div>
@@ -208,41 +128,43 @@
       <div class="container">
         <div class="row footer-menu">
           <div class="col-xs-12 col-md-8">
-            <div class="col-xs-2 col-md">
-              <h5>About</h5>
-              <ul class="list-unstyled">
-                <li><a href="http://about.zenodo.org">About</a></li>
-                <li><a href="http://about.zenodo.org/policies">Policies</a></li>
-                <li><a href="http://about.zenodo.org/contact">Contact</a></li>
-              </ul>
-            </div>
-            <div class="col-xs-2 col-md">
-              <h5>Blog</h5>
-              <ul class="list-unstyled">
-                <li><a href="http://blog.zenodo.org">Blog</a></li>
-              </ul>
-            </div>
-            <div class="col-xs-2 col-md">
-              <h5>Help</h5>
-              <ul class="list-unstyled">
-                <li><a href="http://help.zenodo.org">FAQ</a></li>
-                <li><a href="http://help.zenodo.org/features">Features</a></li>
-                <li><a href="http://help.zenodo.org/whatsnew">What's New</a></li>
-              </ul>
-            </div>
-            <div class="col-xs-2 col-md">
-              <h5>Developers</h5>
-              <ul class="list-unstyled">
-              <li><a href="http://developers.zenodo.org">REST API</a></li>
-              <li><a href="http://developers.zenodo.org#oai-pmh">OAI-PMH</a></li>
-              </ul>
-            </div>
-            <div class="col-xs-2 col-md">
-              <h5>Contribute</h5>
-              <ul class="list-unstyled">
-                <li><a href="http://github.com/zenodo/zenodo"><i class="fa fa-external-link"></i> GitHub</a></li>
-                <li><a href="https://zenodo.org/donate"><i class="fa fa-external-link"></i> Donate</a></li>
-              </ul>
+            <div class="row">
+              <div class="col-xs-2 col-md-2">
+                <h5>About</h5>
+                <ul class="list-unstyled">
+                  <li><a href="http://about.zenodo.org">About</a></li>
+                  <li><a href="http://about.zenodo.org/policies">Policies</a></li>
+                  <li><a href="http://about.zenodo.org/contact">Contact</a></li>
+                </ul>
+              </div>
+              <div class="col-xs-2 col-md-2">
+                <h5>Blog</h5>
+                <ul class="list-unstyled">
+                  <li><a href="http://blog.zenodo.org">Blog</a></li>
+                </ul>
+              </div>
+              <div class="col-xs-2 col-md-2">
+                <h5>Help</h5>
+                <ul class="list-unstyled">
+                  <li><a href="http://help.zenodo.org">FAQ</a></li>
+                  <li><a href="http://help.zenodo.org/features">Features</a></li>
+                  <li><a href="http://help.zenodo.org/whatsnew">What's New</a></li>
+                </ul>
+              </div>
+              <div class="col-xs-2 col-md-2">
+                <h5>Developers</h5>
+                <ul class="list-unstyled">
+                <li><a href="http://developers.zenodo.org">REST API</a></li>
+                <li><a href="http://developers.zenodo.org#oai-pmh">OAI-PMH</a></li>
+                </ul>
+              </div>
+              <div class="col-xs-2 col-md-2">
+                <h5>Contribute</h5>
+                <ul class="list-unstyled">
+                  <li><a href="http://github.com/zenodo/zenodo"><i class="fa fa-external-link"></i> GitHub</a></li>
+                  <li><a href="https://zenodo.org/donate"><i class="fa fa-external-link"></i> Donate</a></li>
+                </ul>
+              </div>
             </div>
           </div>
           <div class="col-xs-12 col-md-4">

@@ -1,0 +1,224 @@
+<!doctype html>
+<meta charset="utf-8">
+<link rel="stylesheet" href="../static/zenodo.css">
+<link rel="stylesheet" href="../static/style.css">
+<link rel="stylesheet" href="../static/font-awesome/css/font-awesome.min.css">
+<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,100,italic" rel="stylesheet">
+<title>Zenodo</title>
+<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+<body>
+  <header>
+    <nav class="navbar navbar-default navbar-static-top">
+      <div class="container">
+        <div class="navbar-header">
+          <a href="https://zenodo.org"><img class="navbar-brand" src="/static/img/zenodo.svg" alt="Zenodo" /></a>
+          <span class="logo-divider"></span>
+          <span class="header-title" aria-label="header-title">About</span>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+          <ul class="nav navbar-nav navbar-right toplist">
+            
+              <li><a href="http://about.zenodo.org">About</a></li>
+            
+              <li><a href="http://blog.zenodo.org">Blog</a></li>
+            
+              <li><a href="http://help.zenodo.org">Help</a></li>
+            
+              <li><a href="http://developers.zenodo.org">Developers</a></li>
+            
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+  <div class="communities">
+    
+    <div class="header">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12 nav navbar-nav navbar subbar">
+            
+
+
+  
+  <li><a href="../">About</a></li>
+
+  
+  <li class="active"><a href="../infrastructure/">Infrastructure</a></li>
+
+  
+  <li><a href="../policies/">Policies</a></li>
+
+  
+  <li><a href="../privacy-policy/">Privacy Policy</a></li>
+
+  
+  <li><a href="../terms/">Terms of Use</a></li>
+
+  
+  <li><a href="../contact/">Contact</a></li>
+
+
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    
+    <div class="container body-container">
+      <div class="row">
+        <div class="col-md-12">
+          <h1>Infrastructure</h1>
+<h2>Organisational</h2>
+<h4>Host institution</h4>
+<p>Zenodo is hosted by CERN which has existed since 1954 and currently has an experimental programme defined for the next 20+ years. CERN is a memory institution for High Energy Physics and renowned for its pioneering work in Open Access. Organisationally Zenodo is embedded in the IT Department, Collaboration Devices and Applications Group, Digital Repositories Section (IT-CDA-DR).</p>
+<p>Zenodo is offered by CERN as part of its mission to make available the results of its work (<a href="https://council.web.cern.ch/en/content/convention-establishment-european-organization-nuclear-research#2">CERN Convention, Article II, §1</a>).</p>
+<h4>Funding</h4>
+<p>Zenodo is funded by:</p>
+<ul>
+<li>European Commission via the <a href="http://www.openaire.eu">OpenAIRE</a> projects:<ul>
+<li>FP7: OpenAIRE (246686), OpenAIREplus (283595)</li>
+<li>Horizon 2020: OpenAIRE2020 (643410) and OpenAIRE-Connect (731011).</li>
+</ul>
+</li>
+<li><a href="http://home.cern">CERN</a></li>
+<li>Donations via <a href="https://giving.web.cern.ch/content/cern-society-foundation">CERN &amp; Society Foundation</a></li>
+</ul>
+<p>Zenodo is developed and supported as a marginal activity, and hosted on top of existing infrastructure and services at CERN, in order to reduce operational costs and rely on existing efforts for High Energy Physics. CERN has some of the world’s top experts in running large scale research data infrastructures and digital repositories that we rely on in order to deliver a trusted digital repository.</p>
+<h4>Staff</h4>
+<p>Zenodo is operated currently by:</p>
+<ul>
+<li><strong>Executive:</strong> Tim Smith</li>
+<li><strong>Service Manager:</strong> Lars Holm Nielsen</li>
+<li><strong>Developers:</strong> Krzystztof Nowak, Alexander Ioannidis-Pantopikos.</li>
+</ul>
+<p>Zenodo is however embedded in a much larger team, headed by Jose Benito Gonzalez Lopez,  which runs services such as <a href="http://cds.cern.ch">CERN Document Server</a>, <a href="http://opendata.cern.ch">CERN Open Data</a>, CERN Analysis Preservation and we rely heavily on co-developing features via the <a href="http://inveniosoftware.org">Invenio digital library framework</a>.</p>
+<h4>Memberships</h4>
+<p>CERN is an active member of the following organisations and international bodies (non-exhaustive):</p>
+<ul>
+<li>DataCite</li>
+<li>ORCID</li>
+<li>FORCE11 (in particular Data Citation Principles and Software Citation Principles)</li>
+<li>Research Data Alliance</li>
+<li>SCOAP3</li>
+</ul>
+<p>We are partners in multiple European Commission funded projects, amongst others:</p>
+<ul>
+<li><a href="http://www.openaire.eu">OpenAIRE</a></li>
+<li><a href="http://www.eudat.eu">EUDAT</a></li>
+</ul>
+<h2>Technical</h2>
+<p>Zenodo is powered by <a href="http://information-technology.web.cern.ch/about/computer-centre">CERN Data Centre</a> and the <a href="http://inveniosoftware.org">Invenio digital library framework</a> and is fully run on open source products all the way through.</p>
+<h4>Server management</h4>
+<p>Zenodo servers are managed via <a href="http://openstack.org/">OpenStack</a> and <a href="https://puppet.com">Puppet</a> configuration management system which ensures that our servers always have the latest security patches applied. Servers are monitored via CERN’s monitoring infrastructure based on Flume, Elasticsearch, Kibana and Hadoop. Application errors are logged and aggregated in a local <a href="https://sentry.io/">Sentry</a> instance. Traffic to Zenodo frontend servers is load balanced via a combination of DNS load balancing and HAProxy load balancers.</p>
+<p>We are furthermore running two independent systems: one <strong>production</strong> system and one <strong>quality assurance</strong> system. This ensures that all changes, whether at infrastructure level or source code level, can be tested and validated on our quality assurance system prior to being applied to our production system.</p>
+<h4>Frontend servers</h4>
+<p>Zenodo frontend servers are responsible for running the Invenio repository platform application which is based on Python and the Flask web development framework. The frontend servers are running nginx HTTP server and uwsgi application server in front of the application and nginx is in addition in charge of serving static content.</p>
+<h4>Data storage</h4>
+<p>All files uploaded to Zenodo are stored in CERN’s <a href="http://eos.web.cern.ch/content/about-eos">EOS service</a> in an 18 petabytes disk cluster. Each file copy has two replicas located on different disk servers.</p>
+<p>For each file we store two independent MD5 checksums. One checksum is stored by Invenio, and used to detect changes to files made from outside of Invenio. The other checksum is stored by EOS, and used for automatic detection and recovery of file corruption on disks.</p>
+<p>Zenodo may, depending on access patterns in the future, move the archival and/or the online copy to CERN’s offline long-term tape storage system CASTOR in order to minimize long-term storage costs.</p>
+<p>EOS is the primary low latency storage infrastructure for physics data from the Large Hadron Collider (LHC) and CERN currently operates multiple instances totalling 150+ petabytes of data with expected growth rates of 30-50 petabytes per year. CERN’s CASTOR system currently manages 100+ petabytes of LHC data which are regularly checked for data corruption.</p>
+<p>Invenio provides an object store like file management layer on top of EOS which is in charge of e.g. version changes to files.</p>
+<h4>Metadata storage</h4>
+<p>Metadata and persistent identifiers in Zenodo are stored in a PostgreSQL instance operated on CERN’s Database on Demand infrastructure with 12-hourly backup cycle with one backup sent to tape storage once a week. Metadata is in addition indexed in an Elasticsearch cluster for fast and powerful searching. Metadata is stored in JSON format in PostgreSQL in a structure described by versioned JSONSchemas. All changes to metadata records on Zenodo are versioned, and happening inside database transactions.</p>
+<p>In addition to the metadata and data storage, Zenodo relies on Redis for caching and RabbitMQ and python Celery for distributed background jobs.</p>
+<h2>Security</h2>
+<p>We take security very serious and do our best to protect your data.</p>
+<ul>
+<li>CERN Data Centre: Our data centres is located on CERN premises and all physical access is restricted to a limited number of staff with appropriate training and who have been granted access in line with their professional duties (e.g. Zendo staff do not have physical access to the CERN Data Centre) .</li>
+<li>Servers: Our servers are managed according to the CERN Security Baseline for Servers, meaning e.g. remote access to our servers are restricted to Zenodo staff with appropriate training, and the operating system and installed applications are kept updated with latest security patches via our automatic configuration management system Puppet.</li>
+<li>Network: CERN Security Team runs both host and network based intrusion detection systems and monitors the traffic flow, pattern and contents into and out of CERN networks in order to detect attacks. All access to zenodo.org happens over HTTPS, except for static documentation pages which are hosted on GitHub Pages.</li>
+<li>Data: Zenodo stores user passwords using strong cryptographic password hashing algorithms (currently PBKDF2+SHA512). Users’ access tokens to GitHub and ORCID are stored encrypted and can only be decrypted with the application’s secret key.</li>
+<li>Application: We are employing a suite of techniques to protect your session from being stolen by an attacker when you are logged in and run vulnerability scans against the application.</li>
+<li>Staff: CERN staff with access to user data operate under <a href="https://security.web.cern.ch/security/rules/en/OC5_english.pdf">CERN Operational Circular no. 5</a>, meaning among other things that <ul>
+<li>staff should not exchange among themselves information acquired unless it is expressly required for the execution of their duties.</li>
+<li>access to user data must always be consistent with the professional duties and only permitted for resolution of problems, detection of security issues,  monitoring of resources and similar.</li>
+<li>staff are liable for damage resulting from any infringement and can have access withdrawn and/or be subject to disciplinary or legal proceedings depending on seriousness of the infringement.</li>
+</ul>
+</li>
+</ul>
+<p><strong>Special note on closed access data</strong></p>
+<p>Zenodo allows users to upload files under closed access. Closed access means that zenodo.org users will not be able to access the files you uploaded. The files are however stored unencrypted and <strong>may</strong> be viewed by Zenodo operational staff under specific conditions. This means that “closed access” on Zenodo <strong>is not</strong> suitable for secret or confidential data.</p>
+
+        </div>
+      </div>
+    </div>
+    
+  </div>
+  <footer class="footer">
+    <div class="menu-wrapper">
+      <div class="container">
+        <div class="row footer-menu">
+          <div class="col-xs-12 col-md-8">
+            <div class="row">
+              <div class="col-xs-2 col-md-2">
+                <h5>About</h5>
+                <ul class="list-unstyled">
+                  <li><a href="http://about.zenodo.org">About</a></li>
+                  <li><a href="http://about.zenodo.org/policies">Policies</a></li>
+                  <li><a href="http://about.zenodo.org/contact">Contact</a></li>
+                </ul>
+              </div>
+              <div class="col-xs-2 col-md-2">
+                <h5>Blog</h5>
+                <ul class="list-unstyled">
+                  <li><a href="http://blog.zenodo.org">Blog</a></li>
+                </ul>
+              </div>
+              <div class="col-xs-2 col-md-2">
+                <h5>Help</h5>
+                <ul class="list-unstyled">
+                  <li><a href="http://help.zenodo.org">FAQ</a></li>
+                  <li><a href="http://help.zenodo.org/features">Features</a></li>
+                  <li><a href="http://help.zenodo.org/whatsnew">What's New</a></li>
+                </ul>
+              </div>
+              <div class="col-xs-2 col-md-2">
+                <h5>Developers</h5>
+                <ul class="list-unstyled">
+                <li><a href="http://developers.zenodo.org">REST API</a></li>
+                <li><a href="http://developers.zenodo.org#oai-pmh">OAI-PMH</a></li>
+                </ul>
+              </div>
+              <div class="col-xs-2 col-md-2">
+                <h5>Contribute</h5>
+                <ul class="list-unstyled">
+                  <li><a href="http://github.com/zenodo/zenodo"><i class="fa fa-external-link"></i> GitHub</a></li>
+                  <li><a href="https://zenodo.org/donate"><i class="fa fa-external-link"></i> Donate</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="col-xs-12 col-md-4">
+            <div class="pull-right-md text-center-sm text-center-xs">
+              <h5>Funded by</h5>
+              <ul class="list-inline">
+                <li><a href="http://home.cern"><img src="/static/img/cern.png" width="60" height="60" /></a></li>
+                <li><a href="http://www.openaire.eu"><img src="/static/img/openaire.png" width="80" height="60" /></a></li>
+                <li><a href="https://ec.europa.eu/programmes/horizon2020/"><img src="/static/img/eu.png" width="88" height="60" /></a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-12 col-sm-6 col-sm-push-6">
+          <div class="pull-right-sm text-center-xs">
+            <ul class="list-inline">
+              <li><a href="http://about.zenodo.org/privacy-policy">Privacy policy</a></li>
+              <li><a href="http://about.zenodo.org/terms">Terms of Use</a></li>
+              <li><a href="http://about.zenodo.org/contact">Support</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-xs-12 col-sm-6 col-sm-pull-6 text-center-xs">
+          <p>Powered by <a href="http://information-technology.web.cern.ch/about/computer-centre">CERN Data Centre</a> &amp; <a href="http://inveniosoftware.org">Invenio</a></p>
+        </div>
+      </div>
+    </div>
+  </footer>
+</body>
