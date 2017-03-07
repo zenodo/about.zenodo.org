@@ -57,9 +57,6 @@
   <li class="active"><a href="../infrastructure/">Infrastructure</a></li>
 
   
-  <li><a href="../principles/">Principles</a></li>
-
-  
   <li><a href="../contact/">Contact</a></li>
 
 
@@ -127,7 +124,7 @@
 <h4>Metadata storage</h4>
 <p>Metadata and persistent identifiers in Zenodo are stored in a PostgreSQL instance operated on CERN’s Database on Demand infrastructure with 12-hourly backup cycle with one backup sent to tape storage once a week. Metadata is in addition indexed in an Elasticsearch cluster for fast and powerful searching. Metadata is stored in JSON format in PostgreSQL in a structure described by versioned JSONSchemas. All changes to metadata records on Zenodo are versioned, and happening inside database transactions.</p>
 <p>In addition to the metadata and data storage, Zenodo relies on Redis for caching and RabbitMQ and python Celery for distributed background jobs.</p>
-<h2>Security</h2>
+<h2><a id="security"></a> Security</h2>
 <p>We take security very serious and do our best to protect your data.</p>
 <ul>
 <li>CERN Data Centre: Our data centres is located on CERN premises and all physical access is restricted to a limited number of staff with appropriate training and who have been granted access in line with their professional duties (e.g. Zendo staff do not have physical access to the CERN Data Centre) .</li>
@@ -135,7 +132,7 @@
 <li>Network: CERN Security Team runs both host and network based intrusion detection systems and monitors the traffic flow, pattern and contents into and out of CERN networks in order to detect attacks. All access to zenodo.org happens over HTTPS, except for static documentation pages which are hosted on GitHub Pages.</li>
 <li>Data: Zenodo stores user passwords using strong cryptographic password hashing algorithms (currently PBKDF2+SHA512). Users’ access tokens to GitHub and ORCID are stored encrypted and can only be decrypted with the application’s secret key.</li>
 <li>Application: We are employing a suite of techniques to protect your session from being stolen by an attacker when you are logged in and run vulnerability scans against the application.</li>
-<li>Staff: CERN staff with access to user data operate under <a href="https://security.web.cern.ch/security/rules/en/OC5_english.pdf">CERN Operational Circular no. 5</a>, meaning among other things that <ul>
+<li>Staff: CERN staff with access to user data operate under <a href="https://security.web.cern.ch/security/rules/en/OC5_english.pdf">CERN Operational Circular no. 5</a>, meaning among other things that<ul>
 <li>staff should not exchange among themselves information acquired unless it is expressly required for the execution of their duties.</li>
 <li>access to user data must always be consistent with the professional duties and only permitted for resolution of problems, detection of security issues,  monitoring of resources and similar.</li>
 <li>staff are liable for damage resulting from any infringement and can have access withdrawn and/or be subject to disciplinary or legal proceedings depending on seriousness of the infringement.</li>
