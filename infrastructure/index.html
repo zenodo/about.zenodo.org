@@ -101,6 +101,14 @@
 <h4>Host institution</h4>
 <p>Zenodo is hosted by CERN which has existed since 1954 and currently has an experimental programme defined for the next 20+ years. CERN is a memory institution for High Energy Physics and renowned for its pioneering work in Open Access. Organisationally Zenodo is embedded in the IT Department, Collaboration Devices and Applications Group, Digital Repositories Section (IT-CDA-DR).</p>
 <p>Zenodo is offered by CERN as part of its mission to make available the results of its work (<a href="https://council.web.cern.ch/en/content/convention-establishment-european-organization-nuclear-research#2">CERN Convention, Article II, §1</a>).</p>
+<h4>Legal status</h4>
+<p>CERN is an intergovernmental organisation and has legal personality in the metropolitan territories of all CERN Member States (<a href="https://council.web.cern.ch/en/content/convention-establishment-european-organization-nuclear-research#9">CERN Convention, Article IX</a>) and enjoys the corresponding legal capacity under public international law.</p>
+<p>As an intergovernmental organization CERN enjoys certain privileges and immunities, including e.g. immunity from jurisdiction of the national courts to ensure our independence from individual Member States. This does not mean that CERN operate in some kind of legal vacuum as protocols requires that CERN settle its disputes by other means. Read more about CERN's legal status in the <a href="http://cds.cern.ch/record/1035135?ln=en">CERN Bulletin</a>.</p>
+<p>Legal documents:</p>
+<ul>
+<li><a href="https://council.web.cern.ch/en/content/convention-establishment-european-organization-nuclear-research">CERN Convention</a></li>
+<li><a href="http://cds.cern.ch/record/1035110/">Protocol on the privileges and immunities of the European Organization for Nuclear Research</a></li>
+</ul>
 <h4>Funding</h4>
 <p>Zenodo is funded by:</p>
 <ul>
@@ -110,7 +118,8 @@
 </ul>
 </li>
 <li><a href="http://home.cern">CERN</a></li>
-<li>Donations via <a href="https://giving.web.cern.ch/content/cern-society-foundation">CERN &amp; Society Foundation</a></li>
+<li><a href="https://sloan.org">Alfred P. Sloan Foundation</a></li>
+<li>Donations via <a href="https://giving.web.cern.ch/content/cern-society-foundation">CERN & Society Foundation</a></li>
 </ul>
 <p>Zenodo is developed and supported as a marginal activity, and hosted on top of existing infrastructure and services at CERN, in order to reduce operational costs and rely on existing efforts for High Energy Physics. CERN has some of the world’s top experts in running large scale research data infrastructures and digital repositories that we rely on in order to deliver a trusted digital repository.</p>
 <h4>Staff</h4>
@@ -138,6 +147,7 @@
 <p><hr /></p>
 <h2>Technical</h2>
 <p>Zenodo is powered by <a href="http://information-technology.web.cern.ch/about/computer-centre">CERN Data Centre</a> and the <a href="http://inveniosoftware.org">Invenio digital library framework</a> and is fully run on open source products all the way through.</p>
+<p>Physically, Zenodo's entire technical infrastructure is located on CERN's premises which is subject to CERN's legal status (see above).</p>
 <h4>Server management</h4>
 <p>Zenodo servers are managed via <a href="http://openstack.org/">OpenStack</a> and <a href="https://puppet.com">Puppet</a> configuration management system which ensures that our servers always have the latest security patches applied. Servers are monitored via CERN’s monitoring infrastructure based on Flume, Elasticsearch, Kibana and Hadoop. Application errors are logged and aggregated in a local <a href="https://sentry.io/">Sentry</a> instance. Traffic to Zenodo frontend servers is load balanced via a combination of DNS load balancing and HAProxy load balancers.</p>
 <p>We are furthermore running two independent systems: one <strong>production</strong> system and one <strong>quality assurance</strong> system. This ensures that all changes, whether at infrastructure level or source code level, can be tested and validated on our quality assurance system prior to being applied to our production system.</p>
