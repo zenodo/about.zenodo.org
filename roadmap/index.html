@@ -74,7 +74,7 @@
   <li><a href="../terms/">Terms of Use</a></li>
 
   
-  <li class="active"><a href="../policies/">General Policies</a></li>
+  <li><a href="../policies/">General Policies</a></li>
 
   
   <li><a href="../infrastructure/">Infrastructure</a></li>
@@ -83,7 +83,7 @@
   <li><a href="../principles/">Principles</a></li>
 
   
-  <li><a href="../roadmap/">Roadmap</a></li>
+  <li class="active"><a href="../roadmap/">Roadmap</a></li>
 
   
   <li><a href="../contact/">Contact</a></li>
@@ -98,55 +98,203 @@
     <div class="container body-container">
       <div class="row">
         <div class="col-md-12">
-          <h1>General Policies <small>v1.0</small></h1>
-<p><hr /></p>
-<h3>Content</h3>
-<ul>
-<li><strong>Scope</strong>: All fields of research.
-All types of research artifacts.
-Content must not violate privacy or copyright, or breach confidentiality or non-disclosure agreements for data collected from human subjects.</li>
-<li><strong>Status of research data</strong>: Any status is accepted, from any stage of the research lifecycle.</li>
-<li><strong>Eligible depositors</strong>: Anyone may register as user of Zenodo.
-All users are allowed to deposit content for which they possess the appropriate rights.</li>
-<li><strong>Ownership</strong>: By uploading content, no change of ownership is implied and no property rights are transferred to CERN.
-All uploaded content remains the property of the parties prior to submission.</li>
-<li><strong>Data file formats</strong>: All formats are allowed - even preservation unfriendly.
-We are working on guidelines and features that will help people deposit in preservation friendly formats.</li>
-<li><strong>Volume and size limitations</strong>: Total files size limit per record is 50GB.
-Higher quotas can be requested and granted on a case-by-case basis.</li>
-<li><strong>Data quality</strong>: All information is provided “as-is”, and the user shall hold Zenodo and information providers supplying data to Zenodo free and harmless in connection with the use of such information.</li>
-<li><strong>Metadata types and sources</strong>: All metadata is stored internally in JSON-format according to a defined <a href="https://zenodo.org/schemas/records/record-v1.0.0.json">JSON schema</a>. Metadata is exported in several standard formats such as MARCXML, Dublin Core, and DataCite Metadata Schema (according to the <a href="https://guidelines.openaire.eu">OpenAIRE Guidelines</a>).</li>
-<li><strong>Language</strong>: For textual items, English is preferred but all languages are accepted.</li>
-<li><strong>Licenses</strong>: Users must specify a license for all publicly available files. Licenses for closed access files may be specified in the description field.</li>
-</ul>
-<h3>Access and Reuse</h3>
-<ul>
-<li><strong>Access to data objects</strong>: Files may be deposited under closed, open, or embargoed access. Files deposited under closed access are protected against unauthorized access at all levels. Access to metadata and data files is provided over standard protocols such as HTTP and OAI-PMH.</li>
-<li><strong>Use and re-use of data objects</strong>: Use and re-use is subject to the license under which the data objects were deposited.</li>
-<li><strong>Embargo status</strong>: Users may deposit content under an embargo status and provide and end date for the embargo. The repository will restrict access to the data until the end of the embargo period; at which time, the content will become publically available automatically.</li>
-<li><strong>Restricted Access</strong>: Users may deposit restricted files with the ability to share access with others if certain requirements are met.  These files will not be made publicly available and sharing will be made possible only by the approval of depositor of the original file.</li>
-<li><strong>Metadata access and reuse</strong>: Metadata is licensed under CC0, except for email addresses. All metadata is exported via OAI-PMH and can be harvested.</li>
-</ul>
-<h3>Removal</h3>
-<ul>
-<li><strong>Revocation</strong>: Content not considered to fall under the scope of the repository will be removed and associated DOIs issued by Zenodo revoked. Please signal promptly, ideally no later than 24 hours from upload, any suspected policy violation. Alternatively, content found to already have an external DOI will have the Zenodo DOI invalidated and the record updated to indicate the original external DOI. User access may be revoked on violation of Terms of Use.</dd></li>
-<li><strong>Withdrawal</strong>: If the uploaded research object must later be withdrawn, the reason for the withdrawal will be indicated on a tombstone page, which will henceforth be served in its place. Withdrawal is considered an exceptional action, which normally should be requested and fully justified by the original uploader. In any other circumstance reasonable attempts will be made to contact the original uploader to obtain consent. The DOI and the URL of the original object are retained.</li>
-</ul>
-<h3>Longevity</h3>
-<ul>
-<li><strong>Versions</strong>: Data files are versioned.
-Records are not versioned.
-The uploaded data is archived as a Submission Information Package.
-Derivatives of data files are generated, but original content is never modified.
-Records can be retracted from public view; however, the data files and record are preserved.</li>
-<li><strong>Replicas</strong>: All data files are stored in CERN Data Centres, primarily Geneva, with replicas in Budapest.
-Data files are kept in multiple replicas in a distributed file system, which is backed up to tape on a nightly basis.</li>
-<li><strong>Retention period</strong>: Items will be retained for the lifetime of the repository. This is currently the lifetime of the host laboratory CERN, which currently has an experimental programme defined for the next 20 years at least.</li>
-<li><strong>Functional preservation</strong>: Zenodo makes no promises of usability and understandability of deposited objects over time.</li>
-<li><strong>File preservation</strong>: Data files and metadata are backed up nightly and replicated into multiple copies in the online system.</li>
-<li><strong>Fixity and authenticity</strong>: All data files are stored along with a MD5 checksum of the file content. Files are regularly checked against their checksums to assure that file content remains constant.</li>
-<li><strong>Succession plans</strong>: In case of closure of the repository, best efforts will be made to integrate all content into suitable alternative institutional and/or subject based repositories.</li>
-</ul>
+          
+<section class="roadmap-section">
+    <div class="container">
+        <div clas="row">
+            <h1>Roadmap</h1>
+            <hr />
+        </div>
+        <div class="row">
+            <div class="col-sm-4 column">
+                <span class="section-title">Current</span>
+                <p>What we work on now</p>
+                    
+<div class="panel panel-default">
+  <div class="panel-heading development">
+    Development
+  </div>
+  <div class="panel-body">
+    <h5 class="panel-title">Login via OpenAIRE</h5>
+    <div class="card-description">
+    <p>Allow login with institutional accounts via the OpenAIRE Authentication and Authorization Infrastructure (AAI) and <a href="https://edugain.org">eduGAIN</a>.</p>
+
+    </div>
+  </div>
+</div>
+
+                    
+<div class="panel panel-default">
+  <div class="panel-heading devops">
+    DevOps
+  </div>
+  <div class="panel-body">
+    <h5 class="panel-title">Logging infrastructure</h5>
+    <div class="card-description">
+    <p>Centralise logging of web server access logs into Elasticsearch cluster.</p>
+
+    </div>
+  </div>
+</div>
+
+                    
+<div class="panel panel-default">
+  <div class="panel-heading development">
+    Development
+  </div>
+  <div class="panel-body">
+    <h5 class="panel-title">New metadata fields</h5>
+    <div class="card-description">
+    <p>Beta support for geospatial, temporal and method metadata in the REST API (display and searching to come later).</p>
+
+    </div>
+  </div>
+</div>
+
+                    
+<div class="panel panel-default">
+  <div class="panel-heading development">
+    Development
+  </div>
+  <div class="panel-body">
+    <h5 class="panel-title">New resource types</h5>
+    <div class="card-description">
+    <p>Support for two new resource types: Data Management Plan, Annotation Collection</p>
+
+    </div>
+  </div>
+</div>
+
+                    
+<div class="panel panel-default">
+  <div class="panel-heading development">
+    Development
+  </div>
+  <div class="panel-body">
+    <h5 class="panel-title">DCAT export format</h5>
+    <div class="card-description">
+    <p>Support for the DCAT export format via the DataCite XML to DCAT XSLT.</p>
+
+    </div>
+  </div>
+</div>
+
+            </div>
+            <div class="col-sm-4 column">
+                <span class="section-title">Near-term</span>
+                <p>What we plan working on next</p>
+                    
+<div class="panel panel-default">
+  <div class="panel-heading devops">
+    DevOps
+  </div>
+  <div class="panel-body">
+    <h5 class="panel-title">Preservation workflows</h5>
+    <div class="card-description">
+    <p>Improve the integration into the CERN tape archive.</p>
+
+    </div>
+  </div>
+</div>
+
+                    
+<div class="panel panel-default">
+  <div class="panel-heading development">
+    Development
+  </div>
+  <div class="panel-body">
+    <h5 class="panel-title">Community redesign</h5>
+    <div class="card-description">
+    <p>Design and refactor the community feature including better support for searching, curation and self-management.</p>
+
+    </div>
+  </div>
+</div>
+
+                    
+<div class="panel panel-default">
+  <div class="panel-heading development">
+    Development
+  </div>
+  <div class="panel-body">
+    <h5 class="panel-title">Minor improvements to GitHub integration</h5>
+    <div class="card-description">
+    <p>Minor optimizations in the release processing workflow as well as better REST API documentation.</p>
+
+    </div>
+  </div>
+</div>
+
+            </div>
+            <div class="col-sm-4 column">
+                <span class="section-title">Future</span>
+                <p>What we investigate</p>
+                    
+<div class="panel panel-default">
+  <div class="panel-heading development">
+    Development
+  </div>
+  <div class="panel-body">
+    <h5 class="panel-title">Teams</h5>
+    <div class="card-description">
+    <p>Support for membership management and multiuser curation in our community feature.</p>
+
+    </div>
+  </div>
+</div>
+
+                    
+<div class="panel panel-default">
+  <div class="panel-heading development">
+    Development
+  </div>
+  <div class="panel-body">
+    <h5 class="panel-title">Community statistics</h5>
+    <div class="card-description">
+    <p>Support for usage metrics per community.</p>
+
+    </div>
+  </div>
+</div>
+
+                    
+<div class="panel panel-default">
+  <div class="panel-heading projects">
+    Projects
+  </div>
+  <div class="panel-body">
+    <h5 class="panel-title">300k treatments</h5>
+    <div class="card-description">
+    <p>Import a dataset of 300.000 biodiversity treatments records into Zenodo in collaboration with Plazi and Pensoft via an Arcadia Fund project.</p>
+
+    </div>
+  </div>
+</div>
+
+                    
+<div class="panel panel-default">
+  <div class="panel-heading projects">
+    Projects
+  </div>
+  <div class="panel-body">
+    <h5 class="panel-title">Migrate to InvenioRDM</h5>
+    <div class="card-description">
+    <p>CERN in collaboration with 10 partners is building InvenioRDM, a turn-key open source research data management platform derived from Zenodo and based on Invenio.</p>
+
+    </div>
+  </div>
+</div>
+
+            </div>
+        </div>
+        <div clas="row">
+            <div class="col-md-8 col-md-offset-2 text-center">
+                Our roadmap helps us share what we are working on next and the direction that we’re taking Zenodo. <br>The roadmap is updated quarterly in January, April, July and October. Questions, comments and feedback? <a href="https://zenodo.org/support">Contact us</a>
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
 
         </div>
       </div>
