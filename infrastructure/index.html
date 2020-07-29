@@ -158,7 +158,7 @@
 <h4>Frontend servers</h4>
 <p>Zenodo frontend servers are responsible for running the Invenio repository platform application which is based on Python and the Flask web development framework. The frontend servers are running nginx HTTP server and uwsgi application server in front of the application and nginx is in addition in charge of serving static content.</p>
 <h4>Data storage</h4>
-<p>All files uploaded to Zenodo are stored in CERN’s <a href="https://eos.web.cern.ch/content/about-eos">EOS service</a> in an 18 petabytes disk cluster. Each file copy has two replicas located on different disk servers.</p>
+<p>All files uploaded to Zenodo are stored in CERN’s <a href="https://eos-web.web.cern.ch/eos-web/">EOS service</a> in an 18 petabytes disk cluster. Each file copy has two replicas located on different disk servers.</p>
 <p>For each file we store two independent MD5 checksums. One checksum is stored by Invenio, and used to detect changes to files made from outside of Invenio. The other checksum is stored by EOS, and used for automatic detection and recovery of file corruption on disks.</p>
 <p>Zenodo may, depending on access patterns in the future, move the archival and/or the online copy to CERN’s offline long-term tape storage system CASTOR in order to minimize long-term storage costs.</p>
 <p>EOS is the primary low latency storage infrastructure for physics data from the Large Hadron Collider (LHC) and CERN currently operates multiple instances totalling 150+ petabytes of data with expected growth rates of 30-50 petabytes per year. CERN’s CASTOR system currently manages 100+ petabytes of LHC data which are regularly checked for data corruption.</p>
