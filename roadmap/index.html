@@ -48,6 +48,8 @@
             
               <li><a href="https://help.zenodo.org">Help</a></li>
             
+              <li><a href="https://about.zenodo.org/projects">Projects</a></li>
+            
               <li><a href="https://developers.zenodo.org">Developers</a></li>
             
           </ul>
@@ -110,7 +112,7 @@
                 <div class="alert alert-info">
                 <p><strong>InvenioRDM</strong>: We are in the process of moving Zenodo on top of the InvenioRDM repository platform.</p>
                 <p>
-                <p>Checkout the <a href="https://inveniordm.web.cern.ch">InvenioRDM Demo Site</a> to see e.g.:</p>
+                <p>Checkout the <a href="https://zenodo-rdm.web.cern.ch">demo site</a> to see e.g.:</p>
                 <ul>
                     <li>Community teams management and multiple curators.</li>
                     <li>Author/creator auto-completion</li>
@@ -186,20 +188,6 @@ integrate Zenodo with Software Heritage</p>
                 <p>What we investigate</p>
                     
 <div class="panel panel-default">
-  <div class="panel-heading projects">
-    Projects
-  </div>
-  <div class="panel-body">
-    <h5 class="panel-title">HORIZON-ZEN kick-off</h5>
-    <div class="card-description">
-    <p>We are kicking off a new EU-funded project that over the coming 2 years will adding multiple new features to communities such as branding capabilities, subcommunities, basic automated curation checks, and integrate third-party FAIR assessment tools directly in the Zenodo interface.</p>
-
-    </div>
-  </div>
-</div>
-
-                    
-<div class="panel panel-default">
   <div class="panel-heading development">
     Development
   </div>
@@ -266,6 +254,22 @@ integrate Zenodo with Software Heritage</p>
 </div>
 
                                 </div>
+                                <div class="col-md-4">
+                                    
+<div class="panel panel-default">
+  <div class="panel-heading projects">
+    Projects
+  </div>
+  <div class="panel-body">
+    <h5 class="panel-title">HORIZON-ZEN kick-off</h5>
+    <div class="card-description">
+    <p>We are kicking off a new EU-funded project that over the coming 2 years will adding multiple new features to communities such as branding capabilities, subcommunities, basic automated curation checks, and integrate third-party FAIR assessment tools directly in the Zenodo interface.</p>
+
+    </div>
+  </div>
+</div>
+
+                                </div>
                             </div>
                         </details>
                         <details open>
@@ -277,13 +281,13 @@ integrate Zenodo with Software Heritage</p>
                                 <div class="col-md-4">
                                     
 <div class="panel panel-default">
-  <div class="panel-heading development">
-    Development
+  <div class="panel-heading devops">
+    DevOps
   </div>
   <div class="panel-body">
-    <h5 class="panel-title">Custom metadata</h5>
+    <h5 class="panel-title">Spam fighting improvements</h5>
     <div class="card-description">
-    <p>Allowing user to enhance uploads with their domain-specific vocabulary metadata.</p>
+    <p>Introduce safe listing of users and a process to safe list new users and block publishing from identified spammer domains.</p>
 
     </div>
   </div>
@@ -293,13 +297,13 @@ integrate Zenodo with Software Heritage</p>
                                 <div class="col-md-4">
                                     
 <div class="panel panel-default">
-  <div class="panel-heading devops">
-    DevOps
+  <div class="panel-heading development">
+    Development
   </div>
   <div class="panel-body">
-    <h5 class="panel-title">Spam fighting improvements</h5>
+    <h5 class="panel-title">Custom metadata</h5>
     <div class="card-description">
-    <p>Introduce safe listing of users and a process to safe list new users and block publishing from identified spammer domains.</p>
+    <p>Allowing user to enhance uploads with their domain-specific vocabulary metadata.</p>
 
     </div>
   </div>
@@ -329,10 +333,9 @@ integrate Zenodo with Software Heritage</p>
     Development
   </div>
   <div class="panel-body">
-    <h5 class="panel-title">ZenodoRDM Demo Site</h5>
+    <h5 class="panel-title">ZenodoRDM: Legacy APIs</h5>
     <div class="card-description">
-    <p>Setup a Zenodo-themed instance of InvenioRDM and make it publicly available so that users can follow progress on the move to InvenioRDM.</p>
-<p>Available on <a href="https://zenodo-rdm.web.cern.ch">https://zenodo-rdm.web.cern.ch</a></p>
+    <p>Add basic support for existing Zenodo legacy APIs in InvenioRDM and perform the first initial data migration tests.</p>
 
     </div>
   </div>
@@ -362,9 +365,10 @@ integrate Zenodo with Software Heritage</p>
     Development
   </div>
   <div class="panel-body">
-    <h5 class="panel-title">ZenodoRDM: Legacy APIs</h5>
+    <h5 class="panel-title">ZenodoRDM Demo Site</h5>
     <div class="card-description">
-    <p>Add basic support for existing Zenodo legacy APIs in InvenioRDM and perform the first initial data migration tests.</p>
+    <p>Setup a Zenodo-themed instance of InvenioRDM and make it publicly available so that users can follow progress on the move to InvenioRDM.</p>
+<p>Available on <a href="https://zenodo-rdm.web.cern.ch">https://zenodo-rdm.web.cern.ch</a></p>
 
     </div>
   </div>
@@ -398,6 +402,22 @@ integrate Zenodo with Software Heritage</p>
                                 <div class="col-md-4">
                                     
 <div class="panel panel-default">
+  <div class="panel-heading development">
+    Development
+  </div>
+  <div class="panel-body">
+    <h5 class="panel-title">ORCiD integration</h5>
+    <div class="card-description">
+    <p>Allowing users in the upload form to search and auto-fill author names coming from ORCiD's database.</p>
+
+    </div>
+  </div>
+</div>
+
+                                </div>
+                                <div class="col-md-4">
+                                    
+<div class="panel panel-default">
   <div class="panel-heading devops">
     DevOps
   </div>
@@ -421,22 +441,6 @@ integrate Zenodo with Software Heritage</p>
     <h5 class="panel-title">Stability improvements to GitHub integration</h5>
     <div class="card-description">
     <p>Automatic retries for failed GitHub releases, better documentation on <code>.zenodo.json</code>, and overall easier troubleshooting.</p>
-
-    </div>
-  </div>
-</div>
-
-                                </div>
-                                <div class="col-md-4">
-                                    
-<div class="panel panel-default">
-  <div class="panel-heading development">
-    Development
-  </div>
-  <div class="panel-body">
-    <h5 class="panel-title">ORCiD integration</h5>
-    <div class="card-description">
-    <p>Allowing users in the upload form to search and auto-fill author names coming from ORCiD's database.</p>
 
     </div>
   </div>
