@@ -212,7 +212,12 @@
 <p>Be aware though that you may also lose some saved information (e.g. saved login details, site preferences).</p>
 <p>See <a href="https://www.aboutcookies.org/how-to-manage-and-delete-cookies">aboutcookies.org</a> for further details of how to control/delete cookies.</p>
 <h4>Managing our analytics cookies</h4>
-<p>Analytics cookies on Zenodo can be managed like described above. In addition, Zenodo supports a technology called "Do Not Track". The "Do Not Track" technology enables visitors to opt-out from being tracked by analytics cookies on websites for whatever purpose, including the use of analytics services.</p>
+<div>
+You can change your preferences using the following buttons:
+<button class='hidden' id='all-consent'>Accept all cookies</button>
+<button class='hidden' id='essential-consent'>Accept only essential cookies</button>
+<button class='hidden' id='withdraw-consent'>Withdraw consent</button>
+</div><p>In addition, Zenodo supports a technology called "Do Not Track". The "Do Not Track" technology enables visitors to opt-out from being tracked by analytics cookies on websites for whatever purpose, including the use of analytics services.</p>
 <p>To enable the “do not track” option in your browser follow the respective link below:</p>
 <ul>
 <li><a href="https://support.mozilla.org/en-US/kb/how-do-i-turn-do-not-track-feature">Firefox</a></li>
@@ -226,7 +231,63 @@
 <h3>Further information</h3>
 <p>See also our <a href="../privacy-policy/">privacy policy</a></p>
 <p><em>Last revision: 2024-03-20</em></p>
+<script>
+function showButtons() {
+    var cookieConsent = document.cookie
+        .split("; ")
+        .find((row) => row.startsWith("cookie_consent="))
+        ?.split("=")[1];
 
+    if (cookieConsent) {
+        document.getElementById("withdraw-consent").classList.remove("hidden")
+        if (cookieConsent === "all") {
+            document.getElementById("all-consent").classList.add("hidden")
+            document.getElementById("essential-consent").classList.remove("hidden")
+        } else {
+            document.getElementById("essential-consent").classList.add("hidden")
+            document.getElementById("all-consent").classList.remove("hidden")
+        }
+    } else {
+        document.getElementById("withdraw-consent").classList.add("hidden")
+        document.getElementById("all-consent").classList.remove("hidden")
+        document.getElementById("essential-consent").classList.remove("hidden")
+    }
+}
+
+showButtons()
+
+$('#all-consent')
+    .on('click', function () {
+        $('.cookie-banner').fadeOut('fast');
+        setCookie("cookie_consent","all");
+        _paq.push(['rememberCookieConsentGiven']);
+        matomo();
+        showButtons()
+    });
+
+$('#essential-consent')
+    .on('click', function ()  {
+        $('.cookie-banner').fadeOut('fast');
+        setCookie("cookie_consent","essential");
+        showButtons()
+    });
+
+$('#withdraw-consent')
+    .on('click', function () {
+        document.querySelector(".cookie-banner").classList.remove("hidden")
+        $('.cookie-banner').fadeIn('fast');
+        unsetCookie("cookie_consent");
+        _paq.push(['forgetCookieConsentGiven']);
+        showButtons()
+    });
+
+function unsetCookie(cname) {
+    var expires = "expires=Thu, 01 Jan 1970 00:00:00 UTC";
+    var cookie = cname + "=;" + expires + ";"
+    cookie += "path=.zenodo.org;SameSite=None; Secure";
+    document.cookie = cookie;
+}
+</script>
         </div>
       </div>
     </div>
@@ -314,21 +375,87 @@
     </div>
   </footer>
   
-<!-- Matomo -->
+  
+<div class="cookie-banner hidden">
+    <i class="close icon"></i>
+    <div>
+        <p >This site uses cookies. Find out more on <a href="https://about.zenodo.org/cookie-policy">how we use cookies</a></p>
+    </div>
+    <div class="buttons">
+        <button class="small primary" id="cookies-all">Accept all cookies</button>
+        <button class="small" id="cookies-essential">Accept only essential cookies</button>
+    </div>
+</div>
+
 <script>
-  var _paq = window._paq = window._paq || [];
-  /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
-  _paq.push(['trackPageView']);
-  _paq.push(['enableLinkTracking']);
-  (function() {
+var _paq = window._paq = window._paq || [];
+_paq.push(['requireCookieConsent']);
+
+(function() {
     var u="https://webanalytics.web.cern.ch/";
     _paq.push(['setTrackerUrl', u+'matomo.php']);
     _paq.push(['setSiteId', '361']);
     var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
     g.async=true; g.src=u+'matomo.js'; s.parentNode.insertBefore(g,s);
-  })();
+})();
+
+var cookieConsent = document.cookie
+    .split("; ")
+    .find((row) => row.startsWith("cookie_consent="))
+    ?.split("=")[1];
+
+if (cookieConsent) {
+    if (cookieConsent === "all") {
+        matomo();
+    }
+} else {
+    document.querySelector(".cookie-banner").classList.remove("hidden")
+    _paq.push(['forgetConsentGiven']);
+}
+
+$('.cookie-banner .close')
+    .on('click', function () {
+    $(this)
+        .closest('.cookie-banner')
+        .fadeOut('fast');
+    setCookie("cookie_consent","essential");
+    });
+
+$('#cookies-essential')
+    .on('click', function () {
+    $(this)
+        .closest('.cookie-banner')
+        .fadeOut('fast');
+    setCookie("cookie_consent","essential");
+    });
+
+$('#cookies-all')
+    .on('click', function () {
+    $(this)
+        .closest('.cookie-banner')
+        .fadeOut('fast');
+    setCookie("cookie_consent","all");
+    _paq.push(['rememberCookieConsentGiven']);
+    matomo();
+    });
+
+function matomo() {
+    /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
+    _paq.push(['trackPageView']);
+    _paq.push(['enableLinkTracking']);
+}
+
+function setCookie(cname, cvalue) {
+    var d = new Date();
+    d.setTime(d.getTime() + (365 * 24 * 60 * 60 * 1000)); // one year
+    var expires = "expires=" + d.toUTCString();
+    var cookie = cname + "=" + cvalue + ";" + expires + ";"
+    cookie += "path=.zenodo.org;SameSite=None; Secure"; // so that it works across subdomains
+    document.cookie = cookie;
+}
 </script>
-<!-- End Matomo Code -->
+
+
 
 </body>
 </html>
