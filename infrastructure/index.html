@@ -140,13 +140,13 @@
 </ul>
 <p>Zenodo is developed and supported as a marginal activity, and hosted on top of existing infrastructure and services at CERN, in order to reduce operational costs and rely on existing efforts for High Energy Physics. CERN has some of the world’s top experts in running large scale research data infrastructures and digital repositories that we rely on in order to deliver a trusted digital repository.</p>
 <h4>Staff</h4>
-<p>Zenodo is operated currently by:</p>
+<p>Zenodo is currently operated by:</p>
 <ul>
 <li><strong>Steering board:</strong> Alexandros Ioannidis-Pantopikos, Jose Benito Gonzalez Lopez, Lars Holm Nielsen, Tim Smith</li>
 <li><strong>Service manager:</strong> Alexandros Ioannidis-Pantopikos</li>
-<li><strong>Developers and supporters:</strong> Dimitris Frangiadakis, Jenny Bonsak, Manuel Alejandro De Oliveira da Costa, Pablo Panero, Rodrigo Almeida</li>
+<li><strong>Developers and supporters:</strong> Carlin MacKenzie, Fatimah Zulfiqar, Manuel Alejandro De Oliveira da Costa, Pablo Tamarit, Yash Lamba</li>
 </ul>
-<p>Zenodo is however embedded in a much larger team, headed by Jose Benito Gonzalez Lopez, which runs services such as <a href="https://cds.cern.ch">CERN Document Server</a>, <a href="http://opendata.cern.ch">CERN Open Data</a>, CERN Analysis Preservation and we rely heavily on co-developing features via the <a href="https://inveniosoftware.org">Invenio digital library framework</a>.</p>
+<p>We co-develop InvenioRDM (the underlying technical software platform) with CERN's Institutional Repositories team who builds and operates services such as <a href="https://cds.cern.ch">CERN Document Server</a> and <a href="http://opendata.cern.ch">CERN Open Data</a>. We rely heavily on CERN IT Department's teams and infrastructure such as database services, search services, platform-as-a-service, monitoring and logging services, storage services, compute and network services, project support services to mention a few. We further co-develop InvenioRDM with the wider InvenioRDM community consisting of 25+ institutional partners.</p>
 <h4>Memberships</h4>
 <p>CERN is an active member of the following organisations and international bodies (non-exhaustive):</p>
 <ul>
@@ -158,24 +158,25 @@
 <li><a href="https://www.rd-alliance.org/">Research Data Alliance (RDA)</a></li>
 <li><a href="https://scoap3.org/">SCOAP3</a></li>
 </ul>
-<p><hr /></p>
+<hr />
+
 <h2>Technical</h2>
-<p>Zenodo is powered by <a href="https://home.cern/science/computing/data-centre">CERN Data Centre</a> and the <a href="https://inveniosoftware.org">Invenio digital library framework</a> and is fully run on open source products all the way through.</p>
+<p>Zenodo is powered by <a href="https://home.cern/science/computing/data-centre">CERN Data Centre</a> and the <a href="https://inveniordm.docs.cern.ch">InvenioRDM</a> and is fully run on open source products all the way through.</p>
 <p>Physically, Zenodo's entire technical infrastructure is located on CERN's premises which is subject to CERN's legal status (see above).</p>
 <h4>Server management</h4>
-<p>Zenodo servers are managed via <a href="https://openstack.org/">OpenStack</a> and <a href="https://puppet.com">Puppet</a> configuration management system which ensures that our servers always have the latest security patches applied. Servers are monitored via CERN’s monitoring infrastructure based on Flume, Elasticsearch, Kibana and Hadoop. Application errors are logged and aggregated in a local <a href="https://sentry.io/">Sentry</a> instance. Traffic to Zenodo frontend servers is load balanced via a combination of DNS load balancing and HAProxy load balancers.</p>
-<p>We are furthermore running two independent systems: one <strong>production</strong> system and one <strong>quality assurance</strong> system. This ensures that all changes, whether at infrastructure level or source code level, can be tested and validated on our quality assurance system prior to being applied to our production system.</p>
+<p>Zenodo servers are managed via <a href="https://docs.openshift.com">OpenShift</a> which itself runs on top of CERN's private cloud which is using <a href="https://openstack.org/">OpenStack</a> and <a href="https://puppet.com">Puppet</a> configuration management system. Servers are monitored via CERN’s monitoring infrastructure based on Logstash, OpenSearch, and Hadoop. Application errors are logged and aggregated in a local <a href="https://sentry.io/">Sentry</a> instance. Traffic to Zenodo frontend servers is load balanced via a combination of DNS load balancing and HAProxy load balancers.</p>
+<p>We are furthermore running three independent systems: one <strong>production</strong> system, one <strong>quality assurance</strong> system, and one <strong>development</strong> system. This ensures that all changes, whether at infrastructure level or source code level, can be tested and validated on our quality assurance system prior to being applied to our production system.</p>
 <h4>Frontend servers</h4>
-<p>Zenodo frontend servers are responsible for running the Invenio repository platform application which is based on Python and the Flask web development framework. The frontend servers are running nginx HTTP server and uwsgi application server in front of the application and nginx is in addition in charge of serving static content.</p>
+<p>Zenodo frontend servers are responsible for running the InvenioRDM repository platform application which is based on Python and the Flask web development framework. The frontend servers are running nginx HTTP server and uwsgi application server in front of the application and nginx is in addition in charge of serving static content.</p>
 <h4>Data storage</h4>
-<p>All files uploaded to Zenodo are stored in CERN’s <a href="https://eos-web.web.cern.ch/eos-web/">EOS service</a> in an 18 petabytes disk cluster. Each file copy has two replicas located on different disk servers.</p>
+<p>All files uploaded to Zenodo are stored in CERN’s <a href="https://eos-web.web.cern.ch/eos-web/">EOS service</a> in an 5 petabytes disk cluster. Each file copy has two replicas located on different disk servers. A daily incremental backup is performed of the EOS storage cluster into a <a href="https://docs.ceph.com/en/reef/">Ceph</a> storage cluster located in a different geographical location (~3.5 km apart). The backup retention policy keeps the last 7 daily backups, last 5 weekly backups and last 6 monthly backups.</p>
 <p>For each file we store two independent MD5 checksums. One checksum is stored by Invenio, and used to detect changes to files made from outside of Invenio. The other checksum is stored by EOS, and used for automatic detection and recovery of file corruption on disks.</p>
-<p>Zenodo may, depending on access patterns in the future, move the archival and/or the online copy to CERN’s offline long-term tape storage system CASTOR in order to minimize long-term storage costs.</p>
-<p>EOS is the primary low latency storage infrastructure for physics data from the Large Hadron Collider (LHC) and CERN currently operates multiple instances totalling 150+ petabytes of data with expected growth rates of 30-50 petabytes per year. CERN’s CASTOR system currently manages 100+ petabytes of LHC data which are regularly checked for data corruption.</p>
-<p>Invenio provides an object store like file management layer on top of EOS which is in charge of e.g. version changes to files.</p>
+<p>EOS is the primary low latency storage infrastructure for physics data from the Large Hadron Collider (LHC) and CERN currently operates multiple instances totalling 1+ exabyte of data.</p>
 <h4>Metadata storage</h4>
-<p>Metadata and persistent identifiers in Zenodo are stored in a PostgreSQL instance operated on CERN’s Database on Demand infrastructure with 12-hourly backup cycle with one backup sent to tape storage once a week. Metadata is in addition indexed in an Elasticsearch cluster for fast and powerful searching. Metadata is stored in JSON format in PostgreSQL in a structure described by versioned JSONSchemas. All changes to metadata records on Zenodo are versioned, and happening inside database transactions.</p>
+<p>Metadata and persistent identifiers in Zenodo are stored in a PostgreSQL instance (with a master-slave setup) operated on CERN’s Database on Demand infrastructure with 24-hourly backup cycle with one backup sent to tape storage once a week. Metadata is in addition indexed in an OpenSearch cluster for fast and powerful searching. Metadata is stored in JSON format in PostgreSQL in a structure described by versioned JSONSchemas. All changes to metadata records on Zenodo are versioned, and happening inside database transactions.</p>
 <p>In addition to the metadata and data storage, Zenodo relies on Redis for caching and RabbitMQ and python Celery for distributed background jobs.</p>
+<h4>Additional infrastructure</h4>
+<p>Zenodo uses self-hosted versions of <a href="https://zammad.org">Zammad</a> for helpdesk management, <a href="https://listmonk.app">listmonk</a> for newsletter management, <a href="https://www.pgbouncer.org">PgBouncer</a> for database connection pooling, and <a href="https://iipimage.sourceforge.io">IIPServer</a> for our image zoom serving.</p>
 <p><hr /></p>
 <h2><a id="security"></a> Security</h2>
 <p>We take security very seriously and do our best to protect your data.</p>
