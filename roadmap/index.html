@@ -29,10 +29,12 @@
 <link rel="stylesheet" href="../static/zenodo.css">
 <link rel="stylesheet" href="../static/style.css">
 <link rel="stylesheet" href="../static/font-awesome/css/font-awesome.min.css">
+<link rel="stylesheet" href="../pagefind/pagefind-component-ui.css">
 <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,100,italic" rel="stylesheet">
 <title>Roadmap | Zenodo</title>
 <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+<script src="../pagefind/pagefind-component-ui.js" type="module"></script>
 </head>
 <body>
   <header>
@@ -180,10 +182,10 @@ publication date, DOI).</p>
     Development
   </div>
   <div class="panel-body">
-    <h5 class="panel-title">GitLab.com integration</h5>
+    <h5 class="panel-title">EOSC EU Node AAI integration</h5>
     <div class="card-description">
-    <p>Archival of software repositories from GitLab.com, alongside the existing
-GitHub.com integration.</p>
+    <p>Authentication via the EOSC EU Node AAI. New user accounts are validated
+automatically using AAI attributes.</p>
 
     </div>
   </div>
@@ -211,10 +213,10 @@ file contents alongside metadata.</p>
     Development
   </div>
   <div class="panel-body">
-    <h5 class="panel-title">EOSC EU Node AAI integration</h5>
+    <h5 class="panel-title">GitLab.com integration</h5>
     <div class="card-description">
-    <p>Authentication via the EOSC EU Node AAI. New user accounts are validated
-automatically using AAI attributes.</p>
+    <p>Archival of software repositories from GitLab.com, alongside the existing
+GitHub.com integration.</p>
 
     </div>
   </div>
@@ -224,6 +226,23 @@ automatically using AAI attributes.</p>
             <div class="col-sm-4 column">
                 <span class="section-title">Future</span>
                 <p>What we investigate</p>
+                    
+<div class="panel panel-default">
+  <div class="panel-heading projects">
+    Projects
+  </div>
+  <div class="panel-body">
+    <h5 class="panel-title">AIRDEC: Advanced AI-assisted metadata and curation</h5>
+    <div class="card-description">
+    <p>Further AI-assisted automation: linking metadata to authoritative identifiers
+(authors to ORCID, affiliations and funders to ROR), deriving metadata from
+record context (e.g. subject classification from abstracts), and reviewing
+records against repository and community curation policies.</p>
+
+    </div>
+  </div>
+</div>
+
                     
 <div class="panel panel-default">
   <div class="panel-heading projects">
@@ -255,23 +274,6 @@ AI tooling.</p>
   </div>
 </div>
 
-                    
-<div class="panel panel-default">
-  <div class="panel-heading projects">
-    Projects
-  </div>
-  <div class="panel-body">
-    <h5 class="panel-title">AIRDEC: Advanced AI-assisted metadata and curation</h5>
-    <div class="card-description">
-    <p>Further AI-assisted automation: linking metadata to authoritative identifiers
-(authors to ORCID, affiliations and funders to ROR), deriving metadata from
-record context (e.g. subject classification from abstracts), and reviewing
-records against repository and community curation policies.</p>
-
-    </div>
-  </div>
-</div>
-
             </div>
         </div>
         <div class="row">
@@ -294,16 +296,16 @@ records against repository and community curation policies.</p>
                             <div class="completed-grid">
                                     
 <div class="panel panel-default">
-  <div class="panel-heading projects">
-    Projects
+  <div class="panel-heading development">
+    Development
   </div>
   <div class="panel-body">
-    <h5 class="panel-title">AIRDEC: First milestone</h5>
+    <h5 class="panel-title">Enhanced comments system</h5>
     <div class="card-description">
-    <p>As part of the AIRDEC project, we achieved the first milestone which
-included setting up the initial infrastructure and beginning the development
-of AI-suggested metadata enhancements for research records.</p>
-<p><em>Completed March 2026</em></p>
+    <p>We enhanced Zenodo's commenting system for submission reviews with several new features:
+LaTeX equation previews, quote functionality, direct comment replies, local draft autosave,
+comment collapsing, permalinks, and file attachments.</p>
+<p><em>Completed April 2026</em></p>
 
     </div>
   </div>
@@ -328,16 +330,16 @@ They include the descriptions of the planned functionalities and UI mock-ups.</p
 
                                     
 <div class="panel panel-default">
-  <div class="panel-heading development">
-    Development
+  <div class="panel-heading projects">
+    Projects
   </div>
   <div class="panel-body">
-    <h5 class="panel-title">Enhanced comments system</h5>
+    <h5 class="panel-title">AIRDEC: First milestone</h5>
     <div class="card-description">
-    <p>We enhanced Zenodo's commenting system for submission reviews with several new features:
-LaTeX equation previews, quote functionality, direct comment replies, local draft autosave,
-comment collapsing, permalinks, and file attachments.</p>
-<p><em>Completed April 2026</em></p>
+    <p>As part of the AIRDEC project, we achieved the first milestone which
+included setting up the initial infrastructure and beginning the development
+of AI-suggested metadata enhancements for research records.</p>
+<p><em>Completed March 2026</em></p>
 
     </div>
   </div>
@@ -356,11 +358,10 @@ comment collapsing, permalinks, and file attachments.</p>
     Projects
   </div>
   <div class="panel-body">
-    <h5 class="panel-title">Biodiversity Literature Repository branded community</h5>
+    <h5 class="panel-title">EU Open Research Repository: Automated checks</h5>
     <div class="card-description">
-    <p>The concepts developed for the EU Open Research Repository is being developed
-and tested now the Biodiversity Literature Repository, which now has a branded
-portal on <a href="http://zenodo.org/communities/biosyslit/">http://zenodo.org/communities/biosyslit/</a></p>
+    <p>The EU Open Research Repository will be expanded with improved curation capabilities through automated curation checks for Horizon Europe open science compliance. Learn more about the planned features in <a href="https://doi.org/10.5281/zenodo.10901185">HORIZON-ZEN FAIR-enabling deposit workflow design</a></p>
+<p><em>Completed March 2025</em></p>
 
     </div>
   </div>
@@ -372,10 +373,11 @@ portal on <a href="http://zenodo.org/communities/biosyslit/">http://zenodo.org/c
     Projects
   </div>
   <div class="panel-body">
-    <h5 class="panel-title">EU Open Research Repository: Automated checks</h5>
+    <h5 class="panel-title">Biodiversity Literature Repository branded community</h5>
     <div class="card-description">
-    <p>The EU Open Research Repository will be expanded with improved curation capabilities through automated curation checks for Horizon Europe open science compliance. Learn more about the planned features in <a href="https://doi.org/10.5281/zenodo.10901185">HORIZON-ZEN FAIR-enabling deposit workflow design</a></p>
-<p><em>Completed March 2025</em></p>
+    <p>The concepts developed for the EU Open Research Repository is being developed
+and tested now the Biodiversity Literature Repository, which now has a branded
+portal on <a href="http://zenodo.org/communities/biosyslit/">http://zenodo.org/communities/biosyslit/</a></p>
 
     </div>
   </div>
@@ -441,6 +443,35 @@ improvements for marine science.</p>
 
                                     
 <div class="panel panel-default">
+  <div class="panel-heading development">
+    Development
+  </div>
+  <div class="panel-body">
+    <h5 class="panel-title">Sharing with users</h5>
+    <div class="card-description">
+    <p>We will add support for sharing records and drafts with users. See <a href="https://help.zenodo.org/docs/share/about/">docs</a>.</p>
+
+    </div>
+  </div>
+</div>
+
+                                    
+<div class="panel panel-default">
+  <div class="panel-heading projects">
+    Projects
+  </div>
+  <div class="panel-body">
+    <h5 class="panel-title">Launch of Software Heritage integration.</h5>
+    <div class="card-description">
+    <p>We will launch the SWH integration on Zenodo during summer 2024.</p>
+<p><em>Planned October 2024</em></p>
+
+    </div>
+  </div>
+</div>
+
+                                    
+<div class="panel panel-default">
   <div class="panel-heading projects">
     Projects
   </div>
@@ -466,6 +497,23 @@ Repository.</p>
     <div class="card-description">
     <p>As part of HORIZON-ZEN, we'll add support for custom visual identity on communities. The feature will only be available for specific communities.</p>
 <p>Launched on <a href="https://zenodo.org/communities/eu/">EU Open Research Repository</a></p>
+
+    </div>
+  </div>
+</div>
+
+                                    
+<div class="panel panel-default">
+  <div class="panel-heading development">
+    Development
+  </div>
+  <div class="panel-body">
+    <h5 class="panel-title">Software improvements and Software Heritage integration</h5>
+    <div class="card-description">
+    <p>As part of the <a href="https://faircore4eosc.eu">FAIRCORE4EOSC</a> project, we will
+be improving the support for software source code types in Zenodo, as well as
+integrate Zenodo with Software Heritage</p>
+<p><em>Improvements are right now being tested on sandbox.zenodo.org</em></p>
 
     </div>
   </div>
@@ -508,56 +556,10 @@ with new changes in methods by spammers.</p>
     Development
   </div>
   <div class="panel-body">
-    <h5 class="panel-title">Software improvements and Software Heritage integration</h5>
-    <div class="card-description">
-    <p>As part of the <a href="https://faircore4eosc.eu">FAIRCORE4EOSC</a> project, we will
-be improving the support for software source code types in Zenodo, as well as
-integrate Zenodo with Software Heritage</p>
-<p><em>Improvements are right now being tested on sandbox.zenodo.org</em></p>
-
-    </div>
-  </div>
-</div>
-
-                                    
-<div class="panel panel-default">
-  <div class="panel-heading projects">
-    Projects
-  </div>
-  <div class="panel-body">
-    <h5 class="panel-title">Launch of Software Heritage integration.</h5>
-    <div class="card-description">
-    <p>We will launch the SWH integration on Zenodo during summer 2024.</p>
-<p><em>Planned October 2024</em></p>
-
-    </div>
-  </div>
-</div>
-
-                                    
-<div class="panel panel-default">
-  <div class="panel-heading development">
-    Development
-  </div>
-  <div class="panel-body">
     <h5 class="panel-title">Vocabularies (ROR, ORCID, MeSH)</h5>
     <div class="card-description">
     <p>We will be working on performing regular updates of some of our backend vocabularies such as ROR (funders/affiliations), ORCID (names) and subject vocabularies (EuroSciVoc, Medical Subject Headings).</p>
 <p><em>Planned July 2024</em></p>
-
-    </div>
-  </div>
-</div>
-
-                                    
-<div class="panel panel-default">
-  <div class="panel-heading development">
-    Development
-  </div>
-  <div class="panel-body">
-    <h5 class="panel-title">Sharing with users</h5>
-    <div class="card-description">
-    <p>We will add support for sharing records and drafts with users. See <a href="https://help.zenodo.org/docs/share/about/">docs</a>.</p>
 
     </div>
   </div>
@@ -715,10 +717,9 @@ Roadmap</a></p>
     Development
   </div>
   <div class="panel-body">
-    <h5 class="panel-title">ZenodoRDM Demo Site</h5>
+    <h5 class="panel-title">Workflows type</h5>
     <div class="card-description">
-    <p>Setup a Zenodo-themed instance of InvenioRDM and make it publicly available so that users can follow progress on the move to InvenioRDM.</p>
-<p>Available on <a href="https://zenodo-rdm.web.cern.ch">https://zenodo-rdm.web.cern.ch</a></p>
+    <p>Introduce a new Workflow upload type and integrate with REANA.</p>
 
     </div>
   </div>
@@ -744,9 +745,10 @@ Roadmap</a></p>
     Development
   </div>
   <div class="panel-body">
-    <h5 class="panel-title">Workflows type</h5>
+    <h5 class="panel-title">ZenodoRDM Demo Site</h5>
     <div class="card-description">
-    <p>Introduce a new Workflow upload type and integrate with REANA.</p>
+    <p>Setup a Zenodo-themed instance of InvenioRDM and make it publicly available so that users can follow progress on the move to InvenioRDM.</p>
+<p>Available on <a href="https://zenodo-rdm.web.cern.ch">https://zenodo-rdm.web.cern.ch</a></p>
 
     </div>
   </div>
@@ -775,6 +777,20 @@ Roadmap</a></p>
 
                                     
 <div class="panel panel-default">
+  <div class="panel-heading devops">
+    DevOps
+  </div>
+  <div class="panel-body">
+    <h5 class="panel-title">Upgrade to PostgreSQL v12</h5>
+    <div class="card-description">
+    <p>In collaboration with the DBoD team at CERN, upgrade our databases to PostgreSQL v12.</p>
+
+    </div>
+  </div>
+</div>
+
+                                    
+<div class="panel panel-default">
   <div class="panel-heading development">
     Development
   </div>
@@ -796,20 +812,6 @@ Roadmap</a></p>
     <h5 class="panel-title">ORCiD integration</h5>
     <div class="card-description">
     <p>Allowing users in the upload form to search and auto-fill author names coming from ORCiD's database.</p>
-
-    </div>
-  </div>
-</div>
-
-                                    
-<div class="panel panel-default">
-  <div class="panel-heading devops">
-    DevOps
-  </div>
-  <div class="panel-body">
-    <h5 class="panel-title">Upgrade to PostgreSQL v12</h5>
-    <div class="card-description">
-    <p>In collaboration with the DBoD team at CERN, upgrade our databases to PostgreSQL v12.</p>
 
     </div>
   </div>
@@ -943,20 +945,6 @@ Roadmap</a></p>
 
                                     
 <div class="panel panel-default">
-  <div class="panel-heading devops">
-    DevOps
-  </div>
-  <div class="panel-body">
-    <h5 class="panel-title">Infrastructure improvements</h5>
-    <div class="card-description">
-    <p>Migrate our Elasticsearch cluster to v7 on CERN's Elasticsearch On Demand service.</p>
-
-    </div>
-  </div>
-</div>
-
-                                    
-<div class="panel panel-default">
   <div class="panel-heading development">
     Development
   </div>
@@ -964,6 +952,20 @@ Roadmap</a></p>
     <h5 class="panel-title">New metadata fields</h5>
     <div class="card-description">
     <p>Beta support for geospatial, temporal and method metadata in the REST API (display and searching to come later).</p>
+
+    </div>
+  </div>
+</div>
+
+                                    
+<div class="panel panel-default">
+  <div class="panel-heading devops">
+    DevOps
+  </div>
+  <div class="panel-body">
+    <h5 class="panel-title">Infrastructure improvements</h5>
+    <div class="card-description">
+    <p>Migrate our Elasticsearch cluster to v7 on CERN's Elasticsearch On Demand service.</p>
 
     </div>
   </div>
