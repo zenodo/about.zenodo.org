@@ -26,15 +26,15 @@
 <meta name="twitter:description" content="Zenodo is a free and open digital archive built by CERN and OpenAIRE, enabling researchers to share and preserve research output in any size, format and from all fields of research." />
 
 <meta name="twitter:image" content="https://blog.zenodo.org/static/img/logos/zenodo-gradient-1000.png" />
-<link rel="stylesheet" href="../../static/zenodo.css">
-<link rel="stylesheet" href="../../static/style.css">
-<link rel="stylesheet" href="../../static/font-awesome/css/font-awesome.min.css">
-<link rel="stylesheet" href="../../pagefind/pagefind-component-ui.css">
+<link rel="stylesheet" href="../static/zenodo.css">
+<link rel="stylesheet" href="../static/style.css">
+<link rel="stylesheet" href="../static/font-awesome/css/font-awesome.min.css">
+<link rel="stylesheet" href="../pagefind/pagefind-component-ui.css">
 <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,100,italic" rel="stylesheet">
-<title>ORCiD integration | Zenodo</title>
+<title>AI Usage Notice | Zenodo</title>
 <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-<script src="../../pagefind/pagefind-component-ui.js" type="module"></script>
+<script src="../pagefind/pagefind-component-ui.js" type="module"></script>
 </head>
 <body>
   <header>
@@ -79,34 +79,34 @@
 
 
   
-  <li><a href="../../">About</a></li>
+  <li><a href="../">About</a></li>
 
   
-  <li><a href="../../privacy-policy/">Privacy policy</a></li>
+  <li><a href="../privacy-policy/">Privacy policy</a></li>
 
   
-  <li><a href="../../cookie-policy/">Cookie policy</a></li>
+  <li><a href="../cookie-policy/">Cookie policy</a></li>
 
   
-  <li><a href="../../terms/">Terms of use</a></li>
+  <li><a href="../terms/">Terms of use</a></li>
 
   
-  <li><a href="../../policies/">General policies</a></li>
+  <li><a href="../policies/">General policies</a></li>
 
   
-  <li><a href="../../ai-usage-notice/">AI usage notice</a></li>
+  <li class="active"><a href="./">AI usage notice</a></li>
 
   
-  <li><a href="../../infrastructure/">Infrastructure</a></li>
+  <li><a href="../infrastructure/">Infrastructure</a></li>
 
   
-  <li><a href="../../principles/">Principles</a></li>
+  <li><a href="../principles/">Principles</a></li>
 
   
-  <li class="active"><a href="../">Roadmap</a></li>
+  <li><a href="../roadmap/">Roadmap</a></li>
 
   
-  <li><a href="../../contact/">Contact</a></li>
+  <li><a href="../contact/">Contact</a></li>
 
 
           </div>
@@ -118,7 +118,47 @@
     <div class="container body-container">
       <div class="row">
         <div class="col-md-12">
-          <p>Allowing users in the upload form to search and auto-fill author names coming from ORCiD's database.</p>
+          <h1>AI Usage Notice <small>v1.0</small></h1>
+<hr />
+
+<p>Zenodo’s core mission is to provide a repository open and free to all researchers. Behind the scenes, we strive to adopt Open Science best practices and align with international standards to enhance system interoperability. This includes continuously improving metadata quality, correctness, and completeness.</p>
+<p>With the evolution of AI technologies, we selectively adopt these tools to support our mission while maintaining strict standards for data privacy, user control, and human oversight.</p>
+<h3>Principles</h3>
+<ol>
+<li><p><strong>Local-only infrastructure</strong>: AI models are evaluated, deployed, and run strictly within the <a href="https://about.zenodo.org/infrastructure/">CERN Data Centre</a>.</p>
+</li>
+<li><p><strong>Open models &amp; no external cloud providers</strong>: We rely exclusively on open-source AI models. No data is ever sent to third-party commercial cloud providers or external APIs.</p>
+</li>
+<li><p><strong>Data isolation</strong>: Any information processed by our AI models stays entirely within Zenodo and CERN infrastructure.</p>
+</li>
+<li><p><strong>Human-in-the-Loop</strong>: AI tools are never used as primary authors or autonomous decision-makers. Humans retain full responsibility and final oversight for all published content.</p>
+</li>
+</ol>
+<h3>Where we use AI today</h3>
+<p>Currently, we utilize AI for the following features:</p>
+<ul>
+<li><strong>Funder grant verification</strong>: For records submitted to the <a href="https://zenodo.org/communities/eu/">EU Open Research Repository (EOR)</a>, Zenodo uses AI to perform a preliminary check if the record's title and description match the corresponding grant description in the official EU project database (CORDIS). The human curators of the EU Open Research Repository are still responsible and fully verify submissions based on the curation policy. <em>Note: This verification step is a required system process and cannot be opted out of to ensure compliance with EOR curation policy</em>.</li>
+<li><strong>Classification tasks</strong>: We train machine learning models for classification tasks, such as spam detection and subject/keyword suggestions.</li>
+</ul>
+<h3>Future scope</h3>
+<p>As we explore new AI capabilities to assist depositors, we plan to introduce optional features such as:</p>
+<ul>
+<li><strong>Automated keywords</strong>: users may request AI-driven suggestions for relevant keywords when submitting to improve record discoverability.</li>
+<li><strong>Metadata assistance</strong>: to accelerate submissions and enhance data accuracy, AI can extract from your uploaded files and suggest values for specific fields like <strong>title</strong>, <strong>description</strong>, <strong>DOI</strong>, <strong>publication date</strong>, or <strong>authors</strong>.</li>
+</ul>
+<p>These upcoming submission features will be optional. Users can choose whether or not to use AI suggestions during the deposit process, and any suggested values must be explicitly reviewed and accepted by the user. You will always have the option to opt out.</p>
+<h3>Frequently Asked Questions (FAQ)</h3>
+<h4>Q1: Will my uploaded files be used to train AI models?</h4>
+<p><strong>No.</strong> Zenodo uses machine learning models for classification, such as identifying relevant keywords and detecting spam content. To offer enhanced recommendations during the submission process, we train models utilizing only published metadata, such as titles, descriptions, and keywords/subjects.</p>
+<h4>Q2: Does the AI grant check process my attached files or private data?</h4>
+<p><strong>No.</strong> The automated funder grant check only analyzes the public metadata fields (title, description and awards/grants) to verify alignment with official <a href="https://cordis.europa.eu">CORDIS</a> grant records. It does not inspect or process your attached dataset or publication files.</p>
+<h4>Q3: What happens if the AI grant verification check fails or flags a mismatch?</h4>
+<p>The grant check is purely an internal quality and validation tool. An AI flag will not automatically reject, delete, or block your deposit.</p>
+<h4>Q4: Why can’t I opt out of the EU grant verification check?</h4>
+<p>Because grant verification is an automated quality assurance check required for compliance with EU Open Research metadata standards, individual opt-outs for this specific background process are not supported. However, future deposit-assistance features <em>can</em> be opted-out.</p>
+<h4>Q5: In what way will AI-generated or AI-suggested text be identifiable?</h4>
+<p>The user interface will feature a prominent label alongside specific icons <i class="fa fa-magic"></i> or <img src="fire-icon.png" alt="Blue fire icon" style="height: 1em; vertical-align: middle;"> to make it explicitly clear whenever suggested text has been created by AI or a curation check has AI input.</p>
+<p><em>Last revision: 31-07-2026</em></p>
 
         </div>
       </div>
